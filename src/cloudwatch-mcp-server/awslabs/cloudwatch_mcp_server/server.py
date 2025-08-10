@@ -48,8 +48,9 @@ except Exception as e:
 
 def main():
     """Run the MCP server."""
-    mcp.run()
-    logger.info('CloudWatch MCP server started')
+    logger.info('Starting CloudWatch MCP server with SSE transport on port 8000')
+    mcp.run(transport="sse")
+    logger.info('CloudWatch MCP server started at port 8000')
 
 
 if __name__ == '__main__':
